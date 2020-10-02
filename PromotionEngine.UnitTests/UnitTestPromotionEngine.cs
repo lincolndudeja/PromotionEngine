@@ -84,16 +84,17 @@ namespace PromotionEngine.UnitTests
             List<SkuProductCart> skuProducts = new List<SkuProductCart>();
             skuProducts.Add(new SkuProductCart()
             {
-                SkuProduct = new SkuProduct("A"),
-                Quantity = 10
+                SkuProduct = new SkuProduct("C"),
+                Quantity = 2
             });
             skuProducts.Add(new SkuProductCart()
             {
-                SkuProduct = new SkuProduct("B"),
-                Quantity = 5
+                SkuProduct = new SkuProduct("D"),
+                Quantity = 3
             });
-            int result = 200;
-            Assert.AreEqual(200, result);
+            IPromotionService promotionService = Factory.GetPromotionService(PromotionType.TypeB);
+            int result = promotionService.GetTotalPrice(skuProducts);
+            Assert.AreEqual(75, result);
         }
         [TestMethod]
         public void ProductC_alone_returnsTotal()
