@@ -136,5 +136,27 @@ namespace PromotionEngine.UnitTests
             int result = Wrapper.GetTotalAmount(skuProducts);
             Assert.AreEqual(280, result);
         }
+        [TestMethod]
+        public void AllProducts_combined_returnstotal_2()
+        {
+            List<SkuProductCart> skuProducts = new List<SkuProductCart>();
+            skuProducts.Add(new SkuProductCart()
+            {
+                SkuProduct = new SkuProduct("A"),
+                Quantity = 5
+            });
+            skuProducts.Add(new SkuProductCart()
+            {
+                SkuProduct = new SkuProduct("B"),
+                Quantity = 5
+            });
+            skuProducts.Add(new SkuProductCart()
+            {
+                SkuProduct = new SkuProduct("C"),
+                Quantity = 1
+            });
+            int result = Wrapper.GetTotalAmount(skuProducts);
+            Assert.AreEqual(370, result);
+        }
     }
 }
