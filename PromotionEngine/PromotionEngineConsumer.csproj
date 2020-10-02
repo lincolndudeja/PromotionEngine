@@ -48,5 +48,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PromotionEngine.BusinessLogic\PromotionEngine.BusinessLogic.csproj">
+      <Project>{C33B5992-6DAC-4EB7-BE26-36645E64D3E0}</Project>
+      <Name>PromotionEngine.BusinessLogic</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
