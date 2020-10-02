@@ -20,10 +20,9 @@ namespace PromotionEngine.BusinessLogic.PromotionServices
             switch (productCountByType.Count())
             {
                 case 2:
-                    var temp = skuProductCarts.Where(x => x.SkuProduct.SkuType == "C" || x.SkuProduct.SkuType == "D").Min(x => x.Quantity);
+                    var minQuantity = skuProductCarts.Where(x => x.SkuProduct.SkuType == "C" || x.SkuProduct.SkuType == "D").Min(x => x.Quantity);
                     var maxType = skuProductCarts.OrderByDescending(x => x.Quantity).FirstOrDefault();
-                    //var temp3 = productCountByType.Where(x => x.Quantity == temp).FirstOrDefault();
-                    amount = ActiveRules.GetRulesDict()["CD"] * temp + (maxType.Quantity-productCountByType.Count) * maxType.SkuProduct.Price;
+                    amount = ActiveRules.GetRulesDict()["CD"] * minQuantity + (maxType.Quantity-productCountByType.Count) * maxType.SkuProduct.Price;
                     break;
                 case 1:
                     foreach (var item in skuProductCarts)
