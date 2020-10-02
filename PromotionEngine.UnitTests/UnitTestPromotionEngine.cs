@@ -3,6 +3,8 @@ using System.Text;
 using System.Collections.Generic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using PromotionEngine.BusinessLogic.Models;
+using PromotionEngine.BusinessLogic.PromotionServiceContracts;
+using PromotionEngine.BusinessLogic.Utility;
 
 namespace PromotionEngine.UnitTests
 {
@@ -65,15 +67,16 @@ namespace PromotionEngine.UnitTests
             input.Add(new SkuProductCart()
             {
                 SkuProduct = new SkuProduct("A"),
-                Quantity = 10
+                Quantity = 5
             });
             input.Add(new SkuProductCart()
             {
                 SkuProduct = new SkuProduct("B"),
                 Quantity = 5
             });
-            int result = 100;
-            Assert.AreEqual(100, result);
+            IPromotionService promotionService = Factory.GetPromotionService(PromotionType.TypeA);
+            int result = promotionService.GetTotalPrice(input);
+            Assert.AreEqual(350, result);
         }
         [TestMethod]
         public void ProductCD_combined_returnstotal()
