@@ -16,7 +16,6 @@ namespace PromotionEngine.BusinessLogic.PromotionServices
 
             var productCountByType = skuProductCarts.Where(x => x.SkuProduct.SkuType == "C" || x.SkuProduct.SkuType == "D").GroupBy(xy => xy.SkuProduct.SkuType)
                   .SelectMany(x => x.ToList()).ToList();
-            //var productCountByType = skuProductCarts.Where(x => x.SkuProduct.SkuType == "C" || x.SkuProduct.SkuType == "D");
             switch (productCountByType.Count())
             {
                 case 2:
