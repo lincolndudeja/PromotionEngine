@@ -10,6 +10,7 @@ namespace PromotionEngine.BusinessLogic.PromotionServices
 {
     class PromotionServiceB : IPromotionService
     {
+        //Case For calculating amount id both Cand D type is present
         public int GetTotalPrice(List<SkuProductCart> skuProductCarts)
         {
             int amount = 0;
@@ -33,6 +34,7 @@ namespace PromotionEngine.BusinessLogic.PromotionServices
             return amount;
 
         }
+        //In case only C and D type Sku are there
         private int GetTotalPriceForIndividualUnit(SkuProduct product, int quantity, Dictionary<string, int> rulesDict)
         {
             int amount = 0;

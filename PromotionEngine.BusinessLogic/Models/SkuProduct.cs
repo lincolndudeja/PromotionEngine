@@ -9,6 +9,10 @@ namespace PromotionEngine.BusinessLogic.Models
         public String SkuType { get; set; }
         public int Price { get; set; }
         public PromotionType promotionType { get; set; }
+        /// <summary>
+        /// Used the constructor to initialize the type and price of individual units. Can create a function as well.
+        /// </summary>
+        /// <param name="skuType"></param>
         public SkuProduct(string skuType)
         {
             this.SkuType = skuType;

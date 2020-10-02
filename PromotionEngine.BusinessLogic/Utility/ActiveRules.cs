@@ -6,6 +6,10 @@ namespace PromotionEngine.BusinessLogic.Utility
 {
     public class ActiveRules
     {
+        /// <summary>
+        /// Create a static method to fetch the rules present. Can pick up these from any file or database.
+        /// </summary>
+        /// <returns></returns>
         public static Dictionary<string, int> GetRulesDict()
         {
             Dictionary<string, int> dict = new Dictionary<string, int>();

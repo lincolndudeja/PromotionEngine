@@ -9,6 +9,11 @@ namespace PromotionEngine.BusinessLogic.Utility
 {
     public class Factory
     {
+        /// <summary>
+        /// Instantiate the promotion service on the basis of promotion type
+        /// </summary>
+        /// <param name="promotionType"></param>
+        /// <returns></returns>
         public static IPromotionService GetPromotionService(PromotionType promotionType)
         {
             switch (promotionType)

@@ -9,6 +9,7 @@ namespace PromotionEngine.BusinessLogic.PromotionServices
 {
     public class PromotionServiceA : IPromotionService
     {
+        // Calculate amount on the basis of quantity
         public int GetTotalPrice(List<SkuProductCart> skuProductCarts)
         {
             int amount = 0;
