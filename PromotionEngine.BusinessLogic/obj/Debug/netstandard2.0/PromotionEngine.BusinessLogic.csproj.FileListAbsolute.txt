@@ -1,0 +1,9 @@
+D:\PromEngine\PromotionEngine\PromotionEngine.BusinessLogic\bin\Debug\netstandard2.0\PromotionEngine.BusinessLogic.deps.json
+D:\PromEngine\PromotionEngine\PromotionEngine.BusinessLogic\bin\Debug\netstandard2.0\PromotionEngine.BusinessLogic.dll
+D:\PromEngine\PromotionEngine\PromotionEngine.BusinessLogic\bin\Debug\netstandard2.0\PromotionEngine.BusinessLogic.pdb
+D:\PromEngine\PromotionEngine\PromotionEngine.BusinessLogic\obj\Debug\netstandard2.0\PromotionEngine.BusinessLogic.csprojAssemblyReference.cache
+D:\PromEngine\PromotionEngine\PromotionEngine.BusinessLogic\obj\Debug\netstandard2.0\PromotionEngine.BusinessLogic.csproj.CoreCompileInputs.cache
+D:\PromEngine\PromotionEngine\PromotionEngine.BusinessLogic\obj\Debug\netstandard2.0\PromotionEngine.BusinessLogic.AssemblyInfoInputs.cache
+D:\PromEngine\PromotionEngine\PromotionEngine.BusinessLogic\obj\Debug\netstandard2.0\PromotionEngine.BusinessLogic.AssemblyInfo.cs
+D:\PromEngine\PromotionEngine\PromotionEngine.BusinessLogic\obj\Debug\netstandard2.0\PromotionEngine.BusinessLogic.dll
+D:\PromEngine\PromotionEngine\PromotionEngine.BusinessLogic\obj\Debug\netstandard2.0\PromotionEngine.BusinessLogic.pdb
