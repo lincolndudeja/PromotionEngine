@@ -116,7 +116,7 @@ namespace PromotionEngine.UnitTests
             skuProducts.Add(new SkuProductCart()
             {
                 SkuProduct = new SkuProduct("A"),
-                Quantity = 10
+                Quantity = 3
             });
             skuProducts.Add(new SkuProductCart()
             {
@@ -126,15 +126,15 @@ namespace PromotionEngine.UnitTests
             skuProducts.Add(new SkuProductCart()
             {
                 SkuProduct = new SkuProduct("C"),
-                Quantity = 6
+                Quantity = 1
             });
             skuProducts.Add(new SkuProductCart()
             {
                 SkuProduct = new SkuProduct("D"),
-                Quantity = 10
+                Quantity = 1
             });
-            int result = 400;
-            Assert.AreEqual(400, result);
+            int result = Wrapper.GetTotalAmount(skuProducts);
+            Assert.AreEqual(280, result);
         }
     }
 }

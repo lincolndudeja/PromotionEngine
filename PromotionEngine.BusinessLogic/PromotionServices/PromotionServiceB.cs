@@ -21,7 +21,7 @@ namespace PromotionEngine.BusinessLogic.PromotionServices
                 case 2:
                     var minQuantity = skuProductCarts.Where(x => x.SkuProduct.SkuType == "C" || x.SkuProduct.SkuType == "D").Min(x => x.Quantity);
                     var maxType = skuProductCarts.OrderByDescending(x => x.Quantity).FirstOrDefault();
-                    amount = ActiveRules.GetRulesDict()["CD"] * minQuantity + (maxType.Quantity-productCountByType.Count) * maxType.SkuProduct.Price;
+                    amount = ActiveRules.GetRulesDict()["CD"] * minQuantity + (maxType.Quantity-minQuantity) * maxType.SkuProduct.Price;
                     break;
                 case 1:
                     foreach (var item in skuProductCarts)
