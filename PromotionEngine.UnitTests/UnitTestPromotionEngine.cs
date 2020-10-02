@@ -102,10 +102,11 @@ namespace PromotionEngine.UnitTests
             List<SkuProductCart> skuProducts = new List<SkuProductCart>();
             skuProducts.Add(new SkuProductCart()
             {
-                SkuProduct = new SkuProduct("A"),
-                Quantity = 10
+                SkuProduct = new SkuProduct("C"),
+                Quantity = 5
             });
-            int result = 100;
+            IPromotionService promotionService = Factory.GetPromotionService(PromotionType.TypeB);
+            int result = promotionService.GetTotalPrice(skuProducts);
             Assert.AreEqual(100, result);
         }
         [TestMethod]
